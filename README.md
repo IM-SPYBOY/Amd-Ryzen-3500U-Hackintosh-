@@ -1,2 +1,2 @@
 # Amd-Ryzen-3500U-Hackintosh-
-OpenCore EFI For And Ryzen 3500U HackinTosh
+OpenCore EFI For Amd Ryzen 3500U HackinTosh
