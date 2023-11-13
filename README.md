@@ -2,7 +2,7 @@
 OpenCore EFI For Amd Ryzen 3500U HackinTosh
 
 What is working
-- [-] - iGPU	
+- [ ] - iGPU	
 - [ ] - Touchpad	
 - [ ] - keyboard	
 - [ ] - Ethernet	
