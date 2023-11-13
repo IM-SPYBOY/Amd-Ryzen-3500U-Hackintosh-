@@ -1,8 +1,8 @@
 # Amd-Ryzen-3500U-Hackintosh-
 OpenCore EFI For Amd Ryzen 3500U HackinTosh
 
-###What works
-- [ ] - iGPU	
+What is working
+- [-] - iGPU	
 - [ ] - Touchpad	
 - [ ] - keyboard	
 - [ ] - Ethernet	
