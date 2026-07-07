@@ -1,55 +1,48 @@
-AMD Ryzen 3500U Hackintosh
+# Amd-Ryzen-3500U-Hackintosh-
+OpenCore EFI For Amd Ryzen 3500U HackinTosh
 
-OpenCore EFI for AMD Ryzen 3500U Hackintosh systems.
+What is working
+- [ ] - iGPU	
+- [ ] - Touchpad	
+- [ ] - keyboard	
+- [ ] - Ethernet	
+- [ ] - Audio	
+- [ ] - AppleID	
+- [ ] - HDMI	
+- [ ] - USB Ports	
+- [ ] - Wifi	
+- [ ] - Bluetooth 	
+- [ ] - Camera 	
+- [ ] - Airplay	
+- [ ] - Screen Mirroring 	
+- [ ] - HandOff	
+- [ ] - Sleep & wake 	
+- [ ] - Battery Status 	
+- [ ] - Backlight & Brightness 	
 
-What is Working
+### Steps
 
-* iGPU
-* Touchpad
-* Keyboard
-* Ethernet
-* Audio
-* Apple ID
-* HDMI
-* USB Ports
-* Wi-Fi
-* Bluetooth
-* Camera
-* AirPlay
-* Screen Mirroring
-* Handoff
-* Sleep & Wake
-* Battery Status
-* Backlight & Brightness
+1. Download the desired Mac version by following the steps in the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/windows-install.html). (Screen Cast works only on Monterey and below)
+2. Download the EFI folder attached to this repo.
+3. Use SSDTTime to dump your DSDT.aml file and copy it to `EFI/OC/ACPI` and replace.
+4. Copy the `com.apple.recovery.boot` along with the `EFI` folder to a FAT32 formatted partition or pendrive.
+5. Boot the system and select boot from the created pendrive/partition.
+6. Once Mac OS Recovery is booted, connect Wi-Fi first, then select Disk Utility and Format a partition in APFS type.
+7. Now use Re-install option and continue with the installation.
+8. Multiple reboots may happen towards the end, select Mac OS installer during bootups. (If the boot hangs up, force reboot by long pressing the power button)
 
-Installation Steps
+### Fixing Sleep/Wake properly
 
-1. Download your desired macOS version by following the OpenCore Install Guide.
-    Note: Screen Mirroring works only on macOS Monterey and earlier.
-2. Download the EFI folder attached to this repository.
-3. Use SSDTTime to dump your DSDT.aml file and copy it to:
+1. Edit DSDT and change `_PWR` values by following the guide [here](https://github.com/grvsh02/A-guide-to-completely-fix-sleep-wake-issues-on-hackintosh-laptops/blob/main/README.md).
+2. For flawless Sleep Wake functionality, go to the `/Library/Preferences/` directory and delete any files with the name of `com.apple.PowerManagement` using Terminal.
+The files would regenerate after a reboot, and you should be good.
 
-EFI/OC/ACPI
+3. Additionally, you can try turning off standby using Hackintool if you are facing reboots on long sleeps.
 
-    Replace the existing DSDT.aml file.
-4. Copy the com.apple.recovery.boot folder along with the EFI folder to a FAT32 formatted USB drive or partition.
-5. Boot your system and select the created USB drive or partition from the boot menu.
-6. Once macOS Recovery has booted:
-    * Connect to Wi-Fi.
-    * Open Disk Utility.
-    * Select the target partition.
-    * Format it as APFS.
-7. Return to macOS Recovery and select Reinstall macOS. Continue with the installation process.
-8. The system may reboot multiple times during installation. Select macOS Installer from the OpenCore boot menu whenever required.
-    Note: If the system hangs during boot, force restart it by holding the power button.
+### Contact & Support
 
-Fixing Sleep/Wake Properly
-
-1. Edit your DSDT and modify the _PWR values by following the Sleep/Wake Fix Guide.
-2. For reliable Sleep/Wake functionality, navigate to:
-
-/Library/Preferences/
-
-    Delete files containing com.apple.PowerManagement in their name using Terminal.
-    These files will automatically regenerate after rebooting the system.
-3. If the system reboots after long periods of sleep, try disabling Standby using Hackintool.
+- Instagram: [@mr_spyboy](https://www.instagram.com/mr_spyboy)
+- Telegram Channel: [SPYxTube](https://t.me/SPYxTube)
+- Telegram Support Group: [spytube_chat](https://t.me/spytube_chat)
+- YouTube: [spyboy](https://youtube.com/spyboy)
+- YouTube: [@spyboy2.0](https://youtube.com/@spyboy2.0)
